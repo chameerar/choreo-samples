@@ -16,4 +16,8 @@ service / on new http:Listener(8090) {
         Greeting greetingMessage = {"from" : "Choreo", "to" : "Test User", "message" : "Welcome to Choreo!"};
         return greetingMessage;
     }
+
+    resource function get health() returns string{
+        return "Service is healthy";
+    }
 }
